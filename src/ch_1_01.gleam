@@ -30,4 +30,29 @@ pub fn abs(x: Float) -> Float {
     False -> x
   }
 }
+
+// Квадратный корень из действительного числа (метод Ньютона)
+pub fn sqrt(x: Float) -> Float {
+  sqrt_iter(1.0, x)
+}
+
+fn sqrt_iter(guess, x: Float) -> Float {
+  case sqrt_good_enough(guess, x) {
+    True -> guess
+    False -> sqrt_iter(sqrt_improve(guess, x), x)
+  }
+}
+
+fn sqrt_good_enough(guess, x: Float) -> Bool {
+  float.absolute_value(square(guess) -. x) <. 0.001
+}
+
+fn sqrt_improve(guess, x: Float) -> Float {
+  average(guess, { x /. guess })
+}
+
+// Среднее арифметическое двух вещественных чисел
+pub fn average(x, y: Float) -> Float {
+  { x +. y } /. 2.0
+}
 // ----------------------------------------------------------------------------
