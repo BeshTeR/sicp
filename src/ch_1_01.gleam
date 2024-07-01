@@ -43,11 +43,11 @@ fn sqrt_iter(guess, x: Float) -> Float {
   }
 }
 
-fn sqrt_good_enough(guess, x: Float) -> Bool {
+pub fn sqrt_good_enough(guess, x: Float) -> Bool {
   float.absolute_value(square(guess) -. x) <. 0.001
 }
 
-fn sqrt_improve(guess, x: Float) -> Float {
+pub fn sqrt_improve(guess, x: Float) -> Float {
   average(guess, { x /. guess })
 }
 

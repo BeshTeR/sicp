@@ -36,3 +36,10 @@ pub fn ex_1_5_test() {
   0
   |> should.equal(ex_1_01.ex_1_5())
 }
+
+pub fn new_if_test() {
+  5
+  |> should.equal(ex_1_01.new_if(2 == 3, 0, 5))
+  0
+  |> should.equal(ex_1_01.new_if(1 == 1, 0, 5))
+}

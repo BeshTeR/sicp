@@ -79,4 +79,21 @@ fn p_test(x: Int, y: fn() -> Int) -> Int {
     False -> y()
   }
 }
+
+// Упражнение 1.6
+pub fn new_if(p: Bool, then_clause, else_clause: t) -> t {
+  case p {
+    True -> then_clause
+    False -> else_clause
+  }
+}
+
+// ... Код зацикливается
+pub fn sqrt_iter_new(guess, x: Float) -> Float {
+  new_if(
+    ch_1_01.sqrt_good_enough(guess, x),
+    guess,
+    sqrt_iter_new(ch_1_01.sqrt_improve(guess, x), x),
+  )
+}
 // ----------------------------------------------------------------------------
