@@ -4,5 +4,5 @@
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/sicp/)
 
 ### Oleg Muraviev <avesh.net@bk.ru>  
-### Реализация на gleam примеров и упражнений из книги:  
+### Реализация на языке [Gleam](https://gleam.run) примеров и упражнений из книги:  
 ### [Абельсон Х. "Структура и интерпретация компьютерных программ", 2-е изд./ Пер. с англ. - Москва: Добросвет, 2006. - 608 с.](book/sicp.pdf)  
