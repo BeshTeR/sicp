@@ -1,5 +1,11 @@
+//// Oleg Muraviev <avesh.net@bk.ru>
+//// 
+//// Реализация на gleam примеров и упражнений из книги:
+//// Абельсон Х. "Структура и интерпретация компьютерных программ". - Москва: Добросвет, 2-е изд., 2006. - 608 с.
+
+import ch_1_1
 import gleam/io
 
 pub fn main() {
-  io.println("Hello from sicp!")
+  Nil
 }
