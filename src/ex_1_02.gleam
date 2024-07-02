@@ -24,7 +24,7 @@ pub fn dec(n: Int) -> Int {
   n - 1
 }
 
-// Упражнение 1.10 (функция Аккермана)
+// Упражнение 1.10
 pub fn ackerman(x, y: Int) -> Int {
   case x, y {
     _, 0 -> 0
