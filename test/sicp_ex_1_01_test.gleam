@@ -43,3 +43,23 @@ pub fn new_if_test() {
   0
   |> should.equal(ex_1_01.new_if(1 == 1, 0, 5))
 }
+
+pub fn sqrt2_test() {
+  1.41421356237468997
+  |> should.equal(ex_1_01.sqrt2(2.0))
+  3.000000001396984
+  |> should.equal(ex_1_01.sqrt2(9.0))
+  1.0
+  |> should.equal(ex_1_01.sqrt2(1.0))
+  1.7737712336472033
+  |> should.equal(ex_1_01.sqrt2(ex_1_01.sqrt2(2.0) +. ex_1_01.sqrt2(3.0)))
+}
+
+pub fn sqrt3_test() {
+  2.000000000012062
+  |> should.equal(ex_1_01.sqrt3(8.0))
+  3.0000000000000977
+  |> should.equal(ex_1_01.sqrt3(27.0))
+  1.0
+  |> should.equal(ex_1_01.sqrt3(1.0))
+}

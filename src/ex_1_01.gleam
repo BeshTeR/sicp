@@ -1,9 +1,9 @@
 //// ГЛАВА 1.1 (упражнения)
 
-import ch_1_01
-
 import gleam/float
 import gleam/function
+
+import ch_1_01
 
 // ----------------------------------------------------------------------------
 
@@ -88,12 +88,31 @@ pub fn new_if(p: Bool, then_clause, else_clause: t) -> t {
   }
 }
 
-// ... Код зацикливается
-pub fn sqrt_iter_new(guess, x: Float) -> Float {
-  new_if(
-    ch_1_01.sqrt_good_enough(guess, x),
-    guess,
-    sqrt_iter_new(ch_1_01.sqrt_improve(guess, x), x),
-  )
+// Упражнение 1.7
+pub fn sqrt2(x: Float) -> Float {
+  sqrt2_iter(1.0, x, x)
+}
+
+fn sqrt2_iter(guess2, guess1, x: Float) -> Float {
+  case float.absolute_value(guess2 -. guess1) <. 0.001 {
+    True -> guess2
+    False ->
+      { guess2 +. { x /. guess2 } } /. 2.0
+      |> sqrt2_iter(guess2, x)
+  }
+}
+
+// Упражнение 1.8
+pub fn sqrt3(x: Float) -> Float {
+  sqrt3_iter(1.0, x, x)
+}
+
+fn sqrt3_iter(guess2, guess1, x: Float) -> Float {
+  case float.absolute_value(guess2 -. guess1) <. 0.001 {
+    True -> guess2
+    False ->
+      { x /. { guess2 *. guess2 } +. 2.0 *. guess2 } /. 3.0
+      |> sqrt3_iter(guess2, x)
+  }
 }
 // ----------------------------------------------------------------------------
