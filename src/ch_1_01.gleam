@@ -23,7 +23,7 @@ pub fn sum_of_squares(x, y: Float) -> Float {
   square(x) +. square(y)
 }
 
-// Абсолютная величина действительного  числа
+// Абсолютная величина действительного числа
 pub fn abs(x: Float) -> Float {
   case x <. 0.0 {
     True -> x |> float.negate()
