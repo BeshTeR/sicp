@@ -72,3 +72,97 @@ pub fn k_test() {
   80
   |> should.equal(ex_1_02.k(4))
 }
+
+pub fn f_r_test() {
+  0
+  |> should.equal(ex_1_02.f_r(0))
+  1
+  |> should.equal(ex_1_02.f_r(1))
+  2
+  |> should.equal(ex_1_02.f_r(2))
+  3
+  |> should.equal(ex_1_02.f_r(3))
+  6
+  |> should.equal(ex_1_02.f_r(4))
+  11
+  |> should.equal(ex_1_02.f_r(5))
+  20
+  |> should.equal(ex_1_02.f_r(6))
+  37
+  |> should.equal(ex_1_02.f_r(7))
+}
+
+pub fn f_i_test() {
+  0
+  |> should.equal(ex_1_02.f_i(0))
+  1
+  |> should.equal(ex_1_02.f_i(1))
+  2
+  |> should.equal(ex_1_02.f_i(2))
+  3
+  |> should.equal(ex_1_02.f_i(3))
+  6
+  |> should.equal(ex_1_02.f_i(4))
+  11
+  |> should.equal(ex_1_02.f_i(5))
+  20
+  |> should.equal(ex_1_02.f_i(6))
+  37
+  |> should.equal(ex_1_02.f_i(7))
+}
+
+pub fn pascal_triangle_test() {
+  1
+  |> should.equal(ex_1_02.pascal_triangle(1, 1))
+  1
+  |> should.equal(ex_1_02.pascal_triangle(2, 1))
+  1
+  |> should.equal(ex_1_02.pascal_triangle(2, 2))
+  1
+  |> should.equal(ex_1_02.pascal_triangle(3, 1))
+  2
+  |> should.equal(ex_1_02.pascal_triangle(3, 2))
+  1
+  |> should.equal(ex_1_02.pascal_triangle(3, 3))
+  1
+  |> should.equal(ex_1_02.pascal_triangle(4, 1))
+  3
+  |> should.equal(ex_1_02.pascal_triangle(4, 2))
+  3
+  |> should.equal(ex_1_02.pascal_triangle(4, 3))
+  1
+  |> should.equal(ex_1_02.pascal_triangle(4, 4))
+  1
+  |> should.equal(ex_1_02.pascal_triangle(5, 1))
+  4
+  |> should.equal(ex_1_02.pascal_triangle(5, 2))
+  6
+  |> should.equal(ex_1_02.pascal_triangle(5, 3))
+  4
+  |> should.equal(ex_1_02.pascal_triangle(5, 4))
+  1
+  |> should.equal(ex_1_02.pascal_triangle(5, 5))
+}
+
+pub fn ex_1_13_test() {
+  True
+  |> should.equal(ex_1_02.ex_1_13(0))
+  True
+  |> should.equal(ex_1_02.ex_1_13(1))
+  True
+  |> should.equal(ex_1_02.ex_1_13(2))
+  True
+  |> should.equal(ex_1_02.ex_1_13(3))
+  True
+  |> should.equal(ex_1_02.ex_1_13(4))
+  True
+  |> should.equal(ex_1_02.ex_1_13(5))
+  True
+  |> should.equal(ex_1_02.ex_1_13(6))
+  True
+  |> should.equal(ex_1_02.ex_1_13(8))
+  True
+  |> should.equal(ex_1_02.ex_1_13(10))
+  True
+  |> should.equal(ex_1_02.ex_1_13(50))
+}
