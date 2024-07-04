@@ -101,7 +101,7 @@ fn cc3(amount, acc: Int, list_denomination: List(Int)) -> Int {
   }
 }
 
-// Возведение в степень
+// Возведение в степень (вариант 1)
 pub fn expt1(b, n: Int) -> Int {
   case n {
     0 -> 1
@@ -113,6 +113,7 @@ pub fn expt2(b, n: Int) -> Int {
   expt2_iter(b, n, 1)
 }
 
+// Возведение в степень (вариант 2)
 fn expt2_iter(b, counter, product: Int) -> Int {
   case counter {
     0 -> product
@@ -120,16 +121,13 @@ fn expt2_iter(b, counter, product: Int) -> Int {
   }
 }
 
+// Бастрое возведение в степень
 pub fn fast_expt(b, n: Int) -> Int {
-  case n, even(n) {
+  case n, n % 2 == 0 {
     0, _ -> 1
     _, True -> square(fast_expt(b, n / 2))
     _, False -> b * fast_expt(b, n - 1)
   }
-}
-
-fn even(n: Int) -> Bool {
-  n % 2 == 0
 }
 
 fn square(n: Int) -> Int {
