@@ -166,3 +166,44 @@ pub fn ex_1_13_test() {
   True
   |> should.equal(ex_1_02.ex_1_13(50))
 }
+
+pub fn ex_1_14_test() {
+  [
+    #(2, 1),
+    #(4, 1),
+    #(8, 2),
+    #(16, 6),
+    #(32, 18),
+    #(64, 77),
+    #(128, 558),
+    #(256, 5482),
+    #(512, 64_064),
+  ]
+  |> should.equal(ex_1_02.ex_1_14(512))
+}
+
+pub fn sine_test() {
+  0.8415945650055845
+  |> should.equal(ex_1_02.sine(1.0))
+  -7.881745995304001e-4
+  |> should.equal(ex_1_02.sine(3.14159265358979))
+  -0.39980345741334
+  |> should.equal(ex_1_02.sine(12.15))
+}
+
+pub fn fast_expt2_test() {
+  1
+  |> should.equal(ex_1_02.fast_expt2(2, 0))
+  2
+  |> should.equal(ex_1_02.fast_expt2(2, 1))
+  1024
+  |> should.equal(ex_1_02.fast_expt2(2, 10))
+  27
+  |> should.equal(ex_1_02.fast_expt2(3, 3))
+  81
+  |> should.equal(ex_1_02.fast_expt2(3, 4))
+  1296
+  |> should.equal(ex_1_02.fast_expt2(6, 4))
+  1296
+  |> should.equal(ex_1_02.fast_expt2(36, 2))
+}

@@ -87,3 +87,54 @@ pub fn count_change3_test() {
   972
   |> should.equal(ch_1_02.count_change3(150))
 }
+
+pub fn expt1_test() {
+  1
+  |> should.equal(ch_1_02.expt1(2, 0))
+  2
+  |> should.equal(ch_1_02.expt1(2, 1))
+  1024
+  |> should.equal(ch_1_02.expt1(2, 10))
+  27
+  |> should.equal(ch_1_02.expt1(3, 3))
+  81
+  |> should.equal(ch_1_02.expt1(3, 4))
+  1296
+  |> should.equal(ch_1_02.expt1(6, 4))
+  1296
+  |> should.equal(ch_1_02.expt1(36, 2))
+}
+
+pub fn expt2_test() {
+  1
+  |> should.equal(ch_1_02.expt2(2, 0))
+  2
+  |> should.equal(ch_1_02.expt2(2, 1))
+  1024
+  |> should.equal(ch_1_02.expt2(2, 10))
+  27
+  |> should.equal(ch_1_02.expt2(3, 3))
+  81
+  |> should.equal(ch_1_02.expt2(3, 4))
+  1296
+  |> should.equal(ch_1_02.expt2(6, 4))
+  1296
+  |> should.equal(ch_1_02.expt2(36, 2))
+}
+
+pub fn fast_expt_test() {
+  1
+  |> should.equal(ch_1_02.fast_expt(2, 0))
+  2
+  |> should.equal(ch_1_02.fast_expt(2, 1))
+  1024
+  |> should.equal(ch_1_02.fast_expt(2, 10))
+  27
+  |> should.equal(ch_1_02.fast_expt(3, 3))
+  81
+  |> should.equal(ch_1_02.fast_expt(3, 4))
+  1296
+  |> should.equal(ch_1_02.fast_expt(6, 4))
+  1296
+  |> should.equal(ch_1_02.fast_expt(36, 2))
+}

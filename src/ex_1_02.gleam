@@ -101,4 +101,45 @@ pub fn ex_1_13(n: Int) -> Bool {
   fib_n == float.round(fi_n /. sqrt5)
   && fib_n == float.round({ fi_n -. ki_n } /. sqrt5)
 }
+
+// Упражнение 1.14
+pub fn ex_1_14(n: Int) -> List(#(Int, Int)) {
+  ex_1_14_iter(n, [])
+}
+
+fn ex_1_14_iter(n: Int, acc: List(#(Int, Int))) -> List(#(Int, Int)) {
+  case n {
+    1 -> acc
+    _ -> ex_1_14_iter(n / 2, [#(n, ch_1_02.count_change3(n)), ..acc])
+  }
+}
+
+// Упражнение 1.15
+pub fn sine(angle: Float) -> Float {
+  case float.absolute_value(angle) <. 0.1 {
+    True -> angle
+    False -> p(sine(angle /. 3.0))
+  }
+}
+
+fn p(x: Float) -> Float {
+  3.0 *. x -. 4.0 *. cube(x)
+}
+
+fn cube(x: Float) -> Float {
+  x *. x *. x
+}
+
+// Упражнение 1.16
+pub fn fast_expt2(n, m: Int) -> Int {
+  fast_expt2_iter(n, m, 1)
+}
+
+fn fast_expt2_iter(n, m, acc: Int) -> Int {
+  case m, m % 2 {
+    0, _ -> acc
+    _, 0 -> fast_expt2_iter(n * n, m / 2, acc)
+    _, _ -> fast_expt2_iter(n, m - 1, n * acc)
+  }
+}
 // ----------------------------------------------------------------------------

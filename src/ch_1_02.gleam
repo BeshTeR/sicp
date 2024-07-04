@@ -100,4 +100,39 @@ fn cc3(amount, acc: Int, list_denomination: List(Int)) -> Int {
       cc3(amount - denimination, cc3(amount, acc, rest), list_denomination)
   }
 }
+
+// Возведение в степень
+pub fn expt1(b, n: Int) -> Int {
+  case n {
+    0 -> 1
+    _ -> b * expt1(b, n - 1)
+  }
+}
+
+pub fn expt2(b, n: Int) -> Int {
+  expt2_iter(b, n, 1)
+}
+
+fn expt2_iter(b, counter, product: Int) -> Int {
+  case counter {
+    0 -> product
+    _ -> expt2_iter(b, counter - 1, b * product)
+  }
+}
+
+pub fn fast_expt(b, n: Int) -> Int {
+  case n, even(n) {
+    0, _ -> 1
+    _, True -> square(fast_expt(b, n / 2))
+    _, False -> b * fast_expt(b, n - 1)
+  }
+}
+
+fn even(n: Int) -> Bool {
+  n % 2 == 0
+}
+
+fn square(n: Int) -> Int {
+  n * n
+}
 // ----------------------------------------------------------------------------
