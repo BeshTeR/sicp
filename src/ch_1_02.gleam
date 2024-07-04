@@ -22,7 +22,7 @@ fn factorial2_iter(product, counter, max_count: Int) -> Int {
   }
 }
 
-// Числа Фибоначчи
+// Числа Фибоначчи (вариант 1)
 pub fn fib1(n: Int) -> Int {
   case n {
     0 -> 0
@@ -31,6 +31,7 @@ pub fn fib1(n: Int) -> Int {
   }
 }
 
+// Числа Фибоначчи (вариант 2)
 pub fn fib2(n: Int) -> Int {
   fib2_iter(1, 0, n)
 }
@@ -68,7 +69,7 @@ fn first_denimination(kinds_of_coins: Int) -> Int {
   }
 }
 
-// Размен монет ... (вариант 2)
+// Размен монет (вариант 2)
 pub fn count_change2(amount: Int) -> Int {
   cc2(amount, 5, 0)
 }
@@ -86,7 +87,7 @@ fn cc2(amount, kinds_of_coins, acc: Int) -> Int {
   }
 }
 
-// Размен монет ... (вариант 3)
+// Размен монет (вариант 3)
 pub fn count_change3(amount: Int) -> Int {
   cc3(amount, 0, [50, 25, 10, 5, 1])
 }
@@ -121,7 +122,7 @@ fn expt2_iter(b, counter, product: Int) -> Int {
   }
 }
 
-// Бастрое возведение в степень
+// Возведение в степень (быстрое возведение в степень, рекурсивный процесс)
 pub fn fast_expt(b, n: Int) -> Int {
   case n, n % 2 == 0 {
     0, _ -> 1
